@@ -29,7 +29,7 @@ resume = {
         'accomplishments': [
             'Team leader in a team of seven - in an extremely fast-paced tools environment for one of the big names in video games. Used Python + Flask to develop internal tools to manage user data within several games.',
             'Interacted with REST endpoints for several video games, creating a common UI to manage individual aspects of each game.'
-        ]
+        ],
         'logoUrl': 'http://yahoo.com'
     },
   ],

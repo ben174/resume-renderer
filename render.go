@@ -19,43 +19,34 @@ type Response2 struct {
 }
 
 type Resume struct {
-	Skills []struct {
-		Skill string `json:"name"`
-		Years int    `json:"years"`
-	} `json:"skills"`
-
-	ProfileSummary []struct {
-		SummaryEntry string `json:"entry"`
-	} `json:"summary"`
-
-	Links []struct {
-		Title string `json:"title"`
-		URL   string `json:"url"`
-	} `json:"links"`
-
-	Links []struct {
-		Title string `json:"title"`
-		URL   string `json:"url"`
-	} `json:"links"`
-
+	Profile    []string `json:"profile"`
+	Experience []struct {
+		StartDate       string   `json:"startDate"`
+		EndDate         string   `json:"endDate"`
+		Title           string   `json:"title"`
+		URL             string   `json:"url"`
+		Employer        string   `json:"employer"`
+		Accomplishments []string `json:"accomplishments"`
+		LogoURL         string   `json:"logoUrl"`
+	} `json:"experience"`
 	Expertise []struct {
 		Category string   `json:"category"`
 		Entries  []string `json:"entries"`
 	} `json:"expertise"`
-
-	Contributions []struct {
-		Title   string   `json:"category"`
-		Entries []string `json:"entries"`
-	} `json:"expertise"`
-}
-
-type Resume struct {
-	Experience []ExperienceEntry `json:"experience"`
-}
-
-type ExperienceEntry struct {
-	Years int    `json:"years"`
 	Name  string `json:"name"`
+	Links []struct {
+		URL   string `json:"url"`
+		Title string `json:"title"`
+	} `json:"links"`
+	URL       string `json:"url"`
+	Email     string `json:"email"`
+	Community []struct {
+		ProjectURL string `json:"projectUrl"`
+		Body       string `json:"body"`
+		SrcURL     string `json:"srcUrl"`
+		Summary    string `json:"summary"`
+		Title      string `json:"title"`
+	} `json:"community"`
 }
 
 func main() {
